@@ -1,20 +1,41 @@
+:root {
+    --header-color: #e5e4e2;
+    --nav-color: #fafafa;
+    --primary-color: #ebebeb;
+    --secondary-color: #AEDD94;
+    --text-color: #606060;
+    
+  }
+
+
 body {
-    background-color:  #ebebeb;
+    background-color:  var(--primary-color);
     margin: 0;
     font-family: 'Inter';
 }
 
 .wrap {
-    margin: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+header .header-left{
+
     display: flex;
     justify-content: space-between;
+    background-color: var(--header-color);
+    padding: 2em;
+
 }
 
 nav ul {
-    background-color: #fafafa;
+    background-color: var(--nav-color);
     position: fixed;
     top: 0;
     right: 0;
@@ -62,21 +83,34 @@ nav ul {
 }
 
 main {
+    padding: 2em;
+}
 
+.styled-hr {
+    width: 80%; /* Adjust the width to control how long the line is */
+    border: none; /* Remove the default border */
+    border-top: 2px solid #333; /* Create a custom solid line */
+    margin: 2em auto; /* Center the line and add margin */
+    opacity: 0.6; /* Optional: make the line slightly transparent */
+  }
+
+.block1{
+    display: flex;
+    flex-direction: column;
     h1, p {
         text-align: center;
 
     }
 
     h1 {
-        margin: 2em 0 1em 0;
+
         font-size:2rem;
     }
 
     p {
-        margin-top: 1em;
+        margin-top: 2em;
         font-size: 1.3rem;
-        color: #606060;
+        color: var(--text-color);
     }
 
     img {
@@ -85,5 +119,160 @@ main {
 
     }
 }
+
+.block2 {
+    display: flex;
+    flex-direction: column;
+
+    h1, p {
+        text-align: center;
+        margin-left: 3em;
+        margin-right:3em;
+
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-wrapper img {
+        width: 70%;
+        border-radius: 1em; /* Adjust the value to control how rounded the corners are */
+
+    }
+
+    p {
+        margin-top: 2em;
+        font-size: 1.3rem;
+        color: var(--text-color);
+        margin-left: 5em;
+        margin-right:5em;
+    }
+
+    .get-involved {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2em;
+
+        &:hover {
+            a{
+                color: white
+            }
+        }
+
+    }
+    
+    .get-involved a{
+        font-size: 1.4rem;
+        background-color: var(--secondary-color); /* Light green */
+        text-decoration: none;
+        color: #333; /* Dark text for contrast */
+        padding: 0.8em 2em;
+        border-radius: 25px; /* Fully rounded corners */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+}
+
+.block3 {
+    display: flex;
+    flex-direction: column;
+
+    h1, p, .table {
+        text-align: center;
+        margin-left: 3em;
+        margin-right:3em;
+    }
+
+
+    p {
+        margin-top: 1em;
+        font-size: 1.3rem;
+        color: var(--text-color);
+    }
+
+    .table {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .activities {
+        margin: 1em;
+        background-color: var(--secondary-color); /* Light green */
+        height: 3em;
+        padding: 1em;
+        border-radius: 35px; /* Fully rounded corners */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+        display: flex; /* Flexbox for centering the text */
+        flex-direction: column;
+        justify-content: center; /* Center text horizontally */
+
+        &:hover {
+            a{
+                color: white
+            }
+        }
+
+
+    }
+
+    .activities a{
+
+        font-size: 1.4rem;
+
+        text-decoration: none;
+        color: #333; /* Dark text for contrast */
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+ 
+}
+
+.block4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        margin-left: 3em;
+        margin-right:3em;
+    }
+
+    .image-wrapper{
+
+        margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .img {
+        width: 30%;
+
+    }
+
+
+
+
+ 
+}
+
+
+
 
 
