@@ -1,0 +1,35 @@
+:root {
+  --header-color: #e5e4e2;
+  --nav-color: #fafafa;
+  --primary-color: #ebebeb;
+  --secondary-color: #AEDD94;
+  --text-color: #606060;
+  
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  background-color:  var(--primary-color);
+  margin: 0;
+  font-family: 'Inter';
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 950px) {
+
+  .hide-mobile {
+      display: block;
+  }
+
+  .hide-desktop {
+      display: none
+  }
+}
+
+
+
+
